@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Faith Rotich – Video Editor | Real talks, better edits</title>
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0A0C15;
+      color: #EFF3F8;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1A1E2C;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #F97316;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      animation: fadeUp 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    }
+
+    .reveal-delay-1 { animation-delay: 0.1s; }
+    .reveal-delay-2 { animation-delay: 0.2s; }
+    .reveal-delay-3 { animation-delay: 0.35s; }
+    .reveal-delay-4 { animation-delay: 0.5s; }
+
+    h1, h2, h3 {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F97316 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.8rem;
+      display: inline-block;
+      background: linear-gradient(120deg, #F97316, #FFB347);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      border-left: 4px solid #F97316;
+      padding-left: 1rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .btn {
+      display: inline-block;
+      font-weight: 600;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #F97316;
+      color: #0A0C15;
+      box-shadow: 0 8px 18px rgba(249, 115, 22, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #FF8C42;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px -8px rgba(249,115,22,0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid #F97316;
+      color: #F97316;
+    }
+
+    .btn-outline:hover {
+      background: rgba(249, 115, 22, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      backdrop-filter: blur(12px);
+      background: rgba(10, 12, 21, 0.7);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(249, 115, 22, 0.2);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #F97316, #FFD966);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #CBD5E1;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #F97316;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 2rem 0 3rem;
+    }
+
+    .hero-content {
+      flex: 1.2;
+    }
+
+    .hero-badge {
+      background: rgba(249, 115, 22, 0.15);
+      color: #F97316;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1.2rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 1.8rem;
+      margin-top: 2rem;
+    }
+
+    .stat {
+      font-weight: 600;
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #F97316;
+    }
+
+    .hero-image {
+      flex: 0.8;
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.5);
+      border: 2px solid rgba(249,115,22,0.4);
+      background: #1F2937;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+    }
+
+    .skill-tag {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(249,115,22,0.3);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: 0.2s;
+    }
+
+    .skill-tag:hover {
+      background: rgba(249,115,22,0.2);
+      border-color: #F97316;
+      transform: translateY(-2px);
+    }
+
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+
+    .col {
+      flex: 1;
+    }
+
+    .profile-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .profile-list li {
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .profile-list i {
+      color: #F97316;
+      width: 24px;
+      font-size: 1.1rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .portfolio-card {
+      background: rgba(20, 24, 36, 0.75);
+      backdrop-filter: blur(8px);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      border-color: rgba(249,115,22,0.4);
+      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.5);
+    }
+
+    .card-media {
+      background: #11141f;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      color: #F97316;
+      position: relative;
+    }
+
+    .card-content {
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+      color: #F97316;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: gap 0.2s;
+    }
+
+    .card-link:hover {
+      gap: 0.8rem;
+    }
+
+    .rates-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .rate-card {
+      background: rgba(18, 22, 35, 0.8);
+      backdrop-filter: blur(8px);
+      border-radius: 28px;
+      padding: 1.8rem;
+      flex: 1;
+      min-width: 220px;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: all 0.3s;
+    }
+
+    .rate-card:hover {
+      border-color: #F97316;
+      transform: translateY(-5px);
+    }
+
+    .rate-card h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .rate-price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #F97316;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .rate-price small {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #94A3B8;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: all 0.2s;
+      z-index: 99;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background: #20b859;
+    }
+
+    .contact-area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      background: linear-gradient(145deg, #10131f, #0a0c14);
+      border-radius: 36px;
+      padding: 2rem;
+      margin-top: 1rem;
+      border: 1px solid rgba(249,115,22,0.2);
+    }
+
+    .contact-text h3 {
+      font-size: 1.8rem;
+    }
+
+    .wa-direct {
+      background: #25D366;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #0A0C15;
+      transition: 0.2s;
+    }
+
+    .wa-direct:hover {
+      background: #20b359;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #5b6e8c;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.5rem;
+      }
+      h1 {
+        font-size: 2.6rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-stats {
+        justify-content: center;
+      }
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+      }
+      .profile-photo {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- WhatsApp button with your number (Kenyan format) -->
+<a href="https://wa.me/254704908255?text=Hi%20Faith%2C%20I%20saw%20your%20work%20and%20I'd%20love%20to%20talk%20about%20a%20video%20project" 
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<nav class="navbar">
+  <div class="logo">🎬 Faith Rotich</div>
+  <div class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#rates">Rates</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <!-- Hero Section - human, direct copy -->
+    <div class="hero reveal">
+      <div class="hero-content">
+        <span class="hero-badge"><i class="fas fa-cut"></i> Hey, I'm Faith</span>
+        <h1>I make videos <br> people actually watch.</h1>
+        <p style="margin-top: 1rem; font-size: 1.1rem; color: #CBD5E1;">Sometimes, let's be honest, most times as humans, we gather moments like wildflowers, we just want someone to help us say what we're feeling. I wanna help you do that. With video edits that tell your story the way you'd tell it yourself. Promos, long-form, social cuts. I'll handle the editing, whatever you need.</p>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-number">4+ years</span> <br>editing full time</div>
+          <div class="stat"><span class="stat-number">24h</span> <br>reply guarantee</div>
+        </div>
+        <div style="margin-top: 2rem;">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-comment"></i> Let's chat</a>
+          <a href="#rates" class="btn btn-outline" style="margin-left: 1rem;"><i class="fas fa-tag"></i> See prices</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- Replace with your actual photo -->
+        <img class="profile-photo" src="me.jpg" alt="Faith Rotich">
+        <p style="font-size:0.7rem; margin-top:0.5rem; opacity:0.6;"></p>
+      </div>
+    </div>
+
+    <!-- About section - real talk -->
+    <div class="section" id="about">
+      <h2 class="reveal reveal-delay-1">A bit about me </h2>
+      <div class="two-col">
+        <div class="col reveal reveal-delay-2">
+          <p style="font-size: 1.05rem; margin-bottom: 1rem;">I'm <strong>Faith Rotich</strong> — a video editor who actually enjoys the whole process: scriptwriting, shooting, editing, and even nerding out on motion graphics. I also have a <strong>MERN stack certificate</strong>, so I understand tech people too.</p>
+          <p>What drives me? Telling stories that feel real. I don't do random flashy effects unless they serve the story. You give me raw footage, I give you something you're proud to share.</p>
+          <div class="skills-grid">
+            <span class="skill-tag">Videography</span>
+            <span class="skill-tag">Editing (Premiere, DaVinci)</span>
+            <span class="skill-tag">Scriptwriting</span>
+            <span class="skill-tag">Motion graphics</span>
+            <span class="skill-tag">Color grading</span>
+            <span class="skill-tag">Web dev (MERN)</span>
+          </div>
+        </div>
+        <div class="col reveal reveal-delay-3">
+          <ul class="profile-list">
+            <li><i class="fas fa-bolt"></i> I work fast but I don't rush quality</li>
+            <li><i class="fas fa-users"></i> Team player — but also solid working alone</li>
+            <li><i class="fas fa-rocket"></i> Always learning, always curious</li>
+            <li><i class="fas fa-chalkboard-user"></i> Give me a brief and I'll run with it</li>
+            <li><i class="fas fa-palette"></i> Outside editing: drawing, music, film photography</li>
+            <li><i class="fas fa-certificate"></i> MERN certified (yes, I code too)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="section" id="work">
+  <h2 class="reveal reveal-delay-1">Stuff I've edited</h2>
+  <div class="portfolio-grid">
+    <!-- Video 1 -->
+    <div class="portfolio-card reveal reveal-delay-2">
+      <a href="https://www.youtube.com/watch?v=DyX1JVl73Gw" target="_blank" style="text-decoration: none;">
+        <div class="card-media" style="background: #11141f; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem;">
+          <i class="fab fa-youtube" style="font-size: 4rem; color: #FF0000;"></i>
+          <span style="color: white; font-size: 0.9rem;">Click to watch on YouTube</span>
+        </div>
+      </a>
+    </div>
+    <!-- Video 2 -->
+    <div class="portfolio-card reveal reveal-delay-2">
+      <a href="https://www.youtube.com/watch?v=uY8lcfeY81w" target="_blank" style="text-decoration: none;">
+        <div class="card-media" style="background: #11141f; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem;">
+          <i class="fab fa-youtube" style="font-size: 4rem; color: #FF0000;"></i>
+          <span style="color: white; font-size: 0.9rem;">Click to watch on YouTube</span>
+        </div>
+      </a>
+    </div>
+    <!-- Video 3 -->
+    <div class="portfolio-card reveal reveal-delay-3">
+      <a href="https://www.youtube.com/watch?v=sfc75JQBNvY" target="_blank" style="text-decoration: none;">
+        <div class="card-media" style="background: #11141f; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem;">
+          <i class="fab fa-youtube" style="font-size: 4rem; color: #FF0000;"></i>
+          <span style="color: white; font-size: 0.9rem;">Click to watch on YouTube</span>
+        </div>
+      </a>
+    </div>
+    <!-- Video 4 -->
+    <div class="portfolio-card reveal reveal-delay-3">
+      <a href="https://www.youtube.com/watch?v=kiCWkCXWV6g" target="_blank" style="text-decoration: none;">
+        <div class="card-media" style="background: #11141f; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem;">
+          <i class="fab fa-youtube" style="font-size: 4rem; color: #FF0000;"></i>
+          <span style="color: white; font-size: 0.9rem;">Click to watch on YouTube</span>
+        </div>
+      </a>
+    </div>
+    <!-- Video 5 - Google Drive link (opens directly) -->
+    <div class="portfolio-card reveal reveal-delay-4">
+      <a href="https://drive.google.com/file/d/1ECSpRLKahV3UXSylgmxezXHhpFtWTr55/view" target="_blank" style="text-decoration: none;">
+        <div class="card-media" style="background: #11141f; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem;">
+          <i class="fab fa-google-drive" style="font-size: 4rem; color: #4285F4;"></i>
+          <span style="color: white; font-size: 0.9rem;">Click to watch on Google Drive</span>
+        </div>
+      </a>
+    </div>
+    <!-- Video 6 -->
+    <div class="portfolio-card reveal reveal-delay-4">
+      <a href="https://youtu.be/IpMnK6gv038" target="_blank" style="text-decoration: none;">
+        <div class="card-media" style="background: #11141f; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem;">
+          <i class="fab fa-youtube" style="font-size: 4rem; color: #FF0000;"></i>
+          <span style="color: white; font-size: 0.9rem;">Click to watch on YouTube</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+    <!-- RATES SECTION (promo & long edits, clear and honest) -->
+    <div class="section" id="rates">
+      <h2 class="reveal">What I charge </h2>
+      <div class="rates-grid">
+        <div class="rate-card reveal reveal-delay-1">
+          <h3><i class="fas fa-chart-line"></i> Promo / Commercial</h3>
+          <div class="rate-price">15,000 KES <small>/finished minute</small></div>
+          <p class="rate-desc">Perfect for brand videos, ads, or YouTube intros. Includes 2 revisions, color grade, and sound cleanup.</p>
+        </div>
+        <div class="rate-card reveal reveal-delay-2">
+          <h3><i class="fas fa-hourglass-half"></i> Long‑form edits</h3>
+          <div class="rate-price">12,000 KES <small>/10 finished minutes</small></div>
+          <p class="rate-desc">Documentaries, podcasts, interviews, vlogs. I'll shape your raw footage into a smooth, engaging narrative.</p>
+        </div>
+        <div class="rate-card reveal reveal-delay-3">
+          <h3><i class="fas fa-mobile-alt"></i> Short‑form (Reels / TikTok)</h3>
+          <div class="rate-price">7,000 KES <small>/video up to 60s</small></div>
+          <p class="rate-desc">Fast turnaround, trending transitions, captions that hook — designed to stop the scroll.</p>
+        </div>
+      </div>
+      <p style="margin-top: 2rem; background: rgba(249,115,22,0.1); padding: 1rem; border-radius: 20px; font-size: 0.9rem; text-align: center;">
+        <i class="fas fa-comment"></i> Need something longer or a custom package? Just ask. I'm flexible.
+      </p>
+    </div>
+
+    <!-- Contact section - direct and personal -->
+    <div class="section" id="contact">
+      <h2 class="reveal">Let's make something good</h2>
+      <div class="contact-area reveal reveal-delay-2">
+        <div class="contact-text">
+          <h3><i class="fab fa-whatsapp"></i> Hit me up on WhatsApp</h3>
+          <p style="margin: 0.5rem 0 1rem;"></p>
+          <a href="https://wa.me/254704908255?text=Hi%20Faith%2C%20I%20have%20a%20video%20project%20in%20mind" 
+             class="wa-direct" target="_blank">
+            <i class="fab fa-whatsapp fa-lg"></i> Chat with me now
+          </a>
+          <div style="margin-top: 1rem;">
+            <i class="fas fa-envelope"></i> tcherotio@gmail.com  &nbsp;&nbsp;|&nbsp; <i class="fas fa-phone-alt"></i> 0704908255
+          </div>
+        </div>
+        <div>
+          <i class="fas fa-smile-wink" style="font-size: 3rem; opacity: 0.4; color: #F97316;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Faith Rotich — Video Editor & Multimedia Storyteller. Built with <i class="fas fa-heart" style="color:#F97316;"></i> in Kenya.</p>
+  <p style="margin-top: 0.3rem;">Available for remote & local productions | MERN certified creative</p>
+</footer>
+
+<script>
+  // scroll reveal animation
+  const reveals = document.querySelectorAll('.reveal');
+  function checkReveal() {
+    for (let el of reveals) {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 100;
+      if (elementTop < windowHeight - revealPoint) {
+        el.style.opacity = '1';
+        el.style.animation = 'fadeUp 0.7s ease forwards';
+      }
+    }
+  }
+  window.addEventListener('load', () => {
+    checkReveal();
+  });
+  window.addEventListener('scroll', checkReveal);
+  checkReveal();
+</script>
+</body>
+</html>
