@@ -34,7 +34,7 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -78,24 +78,23 @@
         }
 
         h1 {
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             line-height: 1.1;
-            font-weight: 800;
+            font-weight: 700;
             letter-spacing: -0.03em;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
         }
 
         h2 {
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 1.8rem;
+            font-weight: 600;
             letter-spacing: -0.02em;
             margin-bottom: 1.5rem;
-            color: #F97316;
         }
 
         .section {
-            padding: 5rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         }
 
         .section:last-of-type {
@@ -107,7 +106,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.2rem 2rem;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             backdrop-filter: blur(12px);
             background: rgba(10, 12, 21, 0.8);
@@ -118,10 +117,10 @@
         }
 
         .logo {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 600;
             color: #EFF3F8;
-            letter-spacing: 0.5px;
+            letter-spacing: -0.5px;
         }
 
         .logo span {
@@ -137,18 +136,18 @@
             font-weight: 400;
             color: #94A3B8;
             transition: 0.2s;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
         .nav-links a:hover {
             color: #EFF3F8;
         }
 
         .hero {
-            padding: 4rem 0 5rem;
+            padding: 3rem 0 4rem;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 3rem;
+            gap: 4rem;
         }
 
         .hero-content {
@@ -157,7 +156,7 @@
         }
 
         .hero-name {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #F97316;
             font-weight: 500;
             letter-spacing: 2px;
@@ -176,14 +175,14 @@
             font-size: 1.1rem;
             color: #94A3B8;
             max-width: 500px;
-            margin: 1.2rem 0 2rem;
+            margin: 1rem 0 1.8rem;
             font-weight: 300;
             line-height: 1.7;
         }
 
         .hero-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
         }
 
@@ -195,13 +194,10 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid transparent;
         }
 
         .hero-links a:hover {
             color: #EFF3F8;
-            border-bottom-color: #F97316;
         }
 
         .hero-links a i {
@@ -219,7 +215,7 @@
             height: 220px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid rgba(249, 115, 22, 0.3);
+            border: 2px solid rgba(249, 115, 22, 0.2);
             box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
             animation: float 6s ease-in-out infinite;
         }
@@ -245,13 +241,9 @@
         .about-grid .left p {
             font-size: 1rem;
             color: #CBD5E1;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             font-weight: 300;
-        }
-
-        .about-grid .left p strong {
-            color: #EFF3F8;
-            font-weight: 500;
+            line-height: 1.7;
         }
 
         .about-grid .right {
@@ -287,59 +279,25 @@
             font-size: 0.8rem;
         }
 
-        .do-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .do-item {
-            background: rgba(20, 24, 36, 0.4);
-            border-radius: 16px;
-            padding: 2rem 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            transition: 0.3s;
-        }
-
-        .do-item:hover {
-            border-color: rgba(249, 115, 22, 0.2);
-            transform: translateY(-4px);
-        }
-
-        .do-item .icon-wrap {
-            width: 48px;
-            height: 48px;
-            background: rgba(249, 115, 22, 0.1);
-            border-radius: 12px;
+        .skills {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.2rem;
         }
 
-        .do-item .icon-wrap i {
-            font-size: 1.4rem;
+        .skills span {
+            background: rgba(249, 115, 22, 0.08);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
             color: #F97316;
-        }
-
-        .do-item h3 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-            color: #EFF3F8;
-        }
-
-        .do-item p {
-            font-size: 0.85rem;
-            color: #94A3B8;
-            font-weight: 300;
-            line-height: 1.5;
+            letter-spacing: 0.3px;
         }
 
         .work-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
@@ -360,44 +318,21 @@
             transform: translateY(-5px);
         }
 
-        .work-card .thumb {
-            background: #11141f;
-            min-height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 0.5rem;
-            padding: 2rem;
+        .work-card .video-wrapper {
             position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #11141f;
         }
 
-        .work-card .thumb .play-icon {
-            width: 56px;
-            height: 56px;
-            background: rgba(249, 115, 22, 0.15);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.3s;
-        }
-
-        .work-card:hover .thumb .play-icon {
-            background: rgba(249, 115, 22, 0.3);
-            transform: scale(1.05);
-        }
-
-        .work-card .thumb .play-icon i {
-            font-size: 1.4rem;
-            color: #F97316;
-        }
-
-        .work-card .thumb .platform {
-            font-size: 0.7rem;
-            color: #5b6e8c;
-            letter-spacing: 0.5px;
-            margin-top: 0.3rem;
+        .work-card .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .work-card .info {
@@ -427,7 +362,7 @@
         .platform-card {
             background: rgba(20, 24, 36, 0.5);
             border-radius: 16px;
-            padding: 2rem;
+            padding: 2.5rem;
             border: 1px solid rgba(255, 255, 255, 0.04);
             transition: 0.3s;
             text-decoration: none;
@@ -459,13 +394,13 @@
         }
 
         .platform-card h4 {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0.3rem;
         }
 
         .platform-card p {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #94A3B8;
             font-weight: 300;
         }
@@ -476,13 +411,13 @@
             font-size: 0.7rem;
             color: #F97316;
             background: rgba(249, 115, 22, 0.1);
-            padding: 0.2rem 1rem;
+            padding: 0.3rem 1.2rem;
             border-radius: 20px;
         }
 
         .currently {
             background: rgba(20, 24, 36, 0.3);
-            border-radius: 20px;
+            border-radius: 16px;
             padding: 2.5rem;
             border: 1px solid rgba(255, 255, 255, 0.04);
             margin-top: 1rem;
@@ -493,7 +428,7 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #5b6e8c;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             display: block;
         }
 
@@ -532,7 +467,7 @@
             justify-content: space-between;
             align-items: center;
             gap: 2rem;
-            padding: 2rem 0;
+            padding: 1rem 0;
         }
 
         .contact-block .left h3 {
@@ -607,7 +542,7 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             .container {
                 padding: 0 1.2rem;
@@ -651,16 +586,13 @@
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             .hero p {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
             .about-grid .left p {
                 font-size: 0.9rem;
-            }
-            .do-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -689,9 +621,8 @@
                     <h1>I make things that actually exist.</h1>
                     <p>Films, websites, products, campaigns. If it's an idea worth bringing into the world, I'm interested.</p>
                     <div class="hero-links">
-                        <a href="#work"><i class="fas fa-arrow-right"></i> Work</a>
-                        <a href="#currently"><i class="fas fa-arrow-right"></i> What I'm up to</a>
-                        <a href="#contact"><i class="fas fa-arrow-right"></i> Say hello</a>
+                        <a href="#work">View work →</a>
+                        <a href="#contact">Get in touch →</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -716,96 +647,66 @@
                             <li><i class="fas fa-check"></i> Run brand and marketing campaigns</li>
                             <li><i class="fas fa-check"></i> Bring all of it together for one project</li>
                         </ul>
-                        <div style="margin-top:1.2rem; display:flex; flex-wrap:wrap; gap:0.4rem;">
-                            <span style="background:rgba(249,115,22,0.08); padding:0.25rem 0.8rem; border-radius:20px; font-size:0.7rem; color:#F97316;">Filmmaking</span>
-                            <span style="background:rgba(249,115,22,0.08); padding:0.25rem 0.8rem; border-radius:20px; font-size:0.7rem; color:#F97316;">Web Design</span>
-                            <span style="background:rgba(249,115,22,0.08); padding:0.25rem 0.8rem; border-radius:20px; font-size:0.7rem; color:#F97316;">MERN Stack</span>
-                            <span style="background:rgba(249,115,22,0.08); padding:0.25rem 0.8rem; border-radius:20px; font-size:0.7rem; color:#F97316;">Motion Graphics</span>
-                            <span style="background:rgba(249,115,22,0.08); padding:0.25rem 0.8rem; border-radius:20px; font-size:0.7rem; color:#F97316;">Brand Strategy</span>
-                            <span style="background:rgba(249,115,22,0.08); padding:0.25rem 0.8rem; border-radius:20px; font-size:0.7rem; color:#F97316;">Scriptwriting</span>
+                        <div class="skills">
+                            <span>Filmmaking</span>
+                            <span>Web Design</span>
+                            <span>MERN Stack</span>
+                            <span>Motion Graphics</span>
+                            <span>Brand Strategy</span>
+                            <span>Scriptwriting</span>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section" id="what-i-do">
-                <h2 class="reveal">What I do</h2>
-                <div class="do-grid">
-                    <div class="do-item reveal reveal-delay-1">
-                        <div class="icon-wrap"><i class="fas fa-film"></i></div>
-                        <h3>Visual Stories</h3>
-                        <p>Documentaries, branded films, commercials. Work that makes people feel something.</p>
-                    </div>
-                    <div class="do-item reveal reveal-delay-2">
-                        <div class="icon-wrap"><i class="fas fa-globe"></i></div>
-                        <h3>Digital Experiences</h3>
-                        <p>Websites that are fast, beautiful, and built to work. Not just look good.</p>
-                    </div>
-                    <div class="do-item reveal reveal-delay-3">
-                        <div class="icon-wrap"><i class="fas fa-cube"></i></div>
-                        <h3>Products & Platforms</h3>
-                        <p>Software that solves problems. From MVPs to full platforms.</p>
-                    </div>
-                    <div class="do-item reveal reveal-delay-4">
-                        <div class="icon-wrap"><i class="fas fa-bullhorn"></i></div>
-                        <h3>Brand & Marketing</h3>
-                        <p>Strategy, content, campaigns. Marketing that builds trust, not noise.</p>
                     </div>
                 </div>
             </section>
 
             <section class="section" id="work">
                 <h2 class="reveal">Work</h2>
-                <p style="color:#94A3B8; font-weight:300; margin-bottom:1.5rem;">A few things I've made. Each one taught me something.</p>
+                <p style="color:#94A3B8; font-weight:300; margin-bottom:1.5rem;">A few things I've made.</p>
                 <div class="work-grid">
 
-                    <a href="https://youtu.be/X5sFdCLMSME" target="_blank" class="work-card reveal reveal-delay-1">
-                        <div class="thumb">
-                            <div class="play-icon"><i class="fas fa-play"></i></div>
-                            <div class="platform">YouTube</div>
+                    <div class="work-card reveal reveal-delay-1">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/X5sFdCLMSME" allowfullscreen></iframe>
                         </div>
                         <div class="info">
                             <div class="tag">Film</div>
                             <h4>The Glass Heart</h4>
-                            <p>Documentary / Short film</p>
+                            <p>Documentary short</p>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="https://youtu.be/sfc75JQBNvY" target="_blank" class="work-card reveal reveal-delay-2">
-                        <div class="thumb">
-                            <div class="play-icon"><i class="fas fa-play"></i></div>
-                            <div class="platform">YouTube</div>
+                    <div class="work-card reveal reveal-delay-2">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/sfc75JQBNvY" allowfullscreen></iframe>
                         </div>
                         <div class="info">
                             <div class="tag">Promo</div>
                             <h4>Global Voyage Rwanda</h4>
-                            <p>Brand / Travel promo</p>
+                            <p>Travel promo</p>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="https://youtu.be/uY8lcfeY81w" target="_blank" class="work-card reveal reveal-delay-3">
-                        <div class="thumb">
-                            <div class="play-icon"><i class="fas fa-play"></i></div>
-                            <div class="platform">YouTube</div>
+                    <div class="work-card reveal reveal-delay-3">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/uY8lcfeY81w" allowfullscreen></iframe>
                         </div>
                         <div class="info">
                             <div class="tag">Tech</div>
                             <h4>Jobzy — Talent Verification</h4>
                             <p>Product walkthrough</p>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="https://youtu.be/OXB1vnJ37VM" target="_blank" class="work-card reveal reveal-delay-4">
-                        <div class="thumb">
-                            <div class="play-icon"><i class="fas fa-play"></i></div>
-                            <div class="platform">YouTube</div>
+                    <div class="work-card reveal reveal-delay-4">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/OXB1vnJ37VM" allowfullscreen></iframe>
                         </div>
                         <div class="info">
                             <div class="tag">Interview</div>
                             <h4>Jason Garner — Corporate Tech</h4>
-                            <p>Interview / Edited conversation</p>
+                            <p>Edited conversation</p>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </section>
 
@@ -816,7 +717,7 @@
                         <div class="icon-wrap"><i class="fas fa-network-wired"></i></div>
                         <h4>Reial Network</h4>
                         <p>A platform for creators and filmmakers to distribute and monetize their work.</p>
-                        <span class="badge">Visit the platform</span>
+                        <span class="badge">Visit the platform →</span>
                     </a>
                 </div>
             </section>
