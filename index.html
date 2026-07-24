@@ -621,8 +621,8 @@
             <section class="hero reveal">
                 <div class="hero-content">
                     <div class="hero-name">Faith Rotich</div>
-                    <h1>I make things that actually exist.</h1>
-                    <p>Films, websites, products, campaigns. If it's an idea worth bringing into the world, I'm interested.</p>
+                    <h1>I build things.</h1>
+                    <p>Films, websites, products. If it's an idea worth making real, I'm in.</p>
                     <div class="hero-links">
                         <a href="#work">View work →</a>
                         <a href="#contact">Get in touch →</a>
@@ -638,8 +638,8 @@
                 <div class="about-grid">
                     <div class="left reveal reveal-delay-1">
                         <h2>I work across a few things.</h2>
-                        <p>Started with a camera because I wanted to tell stories. That led to editing, design, web development, and building businesses. I didn't plan it — it just made sense.</p>
-                        <p>Now I work across film, design, development, and strategy. Not because I'm trying to do everything, but because good ideas don't care about categories. They just need someone who can make them real.</p>
+                        <p>Started with a camera because I wanted to tell stories. That led to editing, design, web development, and building businesses.</p>
+                        <p>Now I work across film, design, development, and strategy. Good ideas don't care about categories — they just need someone who can make them real.</p>
                     </div>
                     <div class="right reveal reveal-delay-2">
                         <span class="label">What that looks like</span>
@@ -778,7 +778,7 @@
                         <li><i class="fas fa-film"></i> Independent film projects</li>
                         <li><i class="fas fa-microchip"></i> Creative tools with AI</li>
                     </ul>
-                    <div class="note">This is what I'm focused on right now. Always something in the works.</div>
+                    <div class="note">Always something in the works.</div>
                 </div>
             </section>
 
@@ -833,24 +833,36 @@
         });
 
         // Pause other videos when one starts playing
-        document.querySelectorAll('.work-card .video-wrapper iframe').forEach(iframe => {
-            iframe.addEventListener('load', function() {
-                const player = new YT.Player(this);
-                player.addEventListener('onStateChange', function(event) {
-                    if (event.data === YT.PlayerState.PLAYING) {
-                        document.querySelectorAll('.work-card .video-wrapper iframe').forEach(other => {
-                            if (other !== this) {
-                                const otherPlayer = new YT.Player(other);
-                                otherPlayer.pauseVideo();
+        let players = {};
+
+        function onYouTubeIframeAPIReady() {
+            document.querySelectorAll('.work-card .video-wrapper iframe').forEach((iframe, index) => {
+                const id = 'player-' + index;
+                iframe.id = id;
+                players[id] = new YT.Player(id, {
+                    events: {
+                        'onStateChange': function(event) {
+                            if (event.data === YT.PlayerState.PLAYING) {
+                                for (let key in players) {
+                                    if (key !== id && players[key] && players[key].pauseVideo) {
+                                        players[key].pauseVideo();
+                                    }
+                                }
                             }
-                        });
+                        }
                     }
                 });
             });
-        });
-    </script>
+        }
 
-    <script src="https://www.youtube.com/iframe_api"></script>
+        // Load YouTube API
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+    </script>
 
 </body>
 </html>
