@@ -279,22 +279,6 @@
             font-size: 0.8rem;
         }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1.2rem;
-        }
-
-        .skills span {
-            background: rgba(249, 115, 22, 0.08);
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            color: #F97316;
-            letter-spacing: 0.3px;
-        }
-
         .work-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -330,18 +314,6 @@
             width: 100%;
             height: 100%;
             border: none;
-        }
-
-        .work-card .info {
-            padding: 0.8rem 1.5rem 1rem;
-        }
-
-        .work-card .info .tag {
-            font-size: 0.6rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #F97316;
-            font-weight: 600;
         }
 
         .platform-grid {
@@ -427,22 +399,21 @@
 
         .currently ul {
             list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
         }
 
         .currently ul li {
             font-size: 0.95rem;
             color: #CBD5E1;
+            margin-bottom: 0.8rem;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 0.6rem;
         }
 
         .currently ul li i {
             color: #F97316;
             font-size: 0.8rem;
+            margin-top: 0.2rem;
         }
 
         .currently .note {
@@ -595,10 +566,6 @@
             .platform-grid {
                 grid-template-columns: 1fr;
             }
-            .currently ul {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
         }
 
         @media (max-width: 480px) {
@@ -640,7 +607,7 @@
                 <div class="hero-content">
                     <div class="hero-name">Faith Rotich</div>
                     <h1>I build ideas into reality.</h1>
-                    <p>Through film, design and technology, I help businesses, creators and startups bring ambitious ideas to life—crafting stories people remember, digital experiences people enjoy, and products that make a difference.</p>
+                    <p>Through film, design and technology, I help bring ambitious ideas to life.</p>
                     <div class="hero-links">
                         <a href="#work">View work →</a>
                         <a href="#contact">Get in touch →</a>
@@ -656,8 +623,8 @@
                 <div class="about-grid">
                     <div class="left reveal reveal-delay-1">
                         <h2>Curiosity built my career.</h2>
-                        <p>I've always been curious about how ideas become reality. That curiosity has taken me from filmmaking into design, software development, digital strategy and entrepreneurship. Every discipline has given me another way to solve problems and create work with purpose.</p>
-                        <p>Today I bring storytelling, design and technology together to help businesses, creators and startups build work that connects with people and stands the test of time.</p>
+                        <p>I've always been curious about how ideas become reality. That curiosity has taken me from filmmaking into design, software development, and entrepreneurship.</p>
+                        <p>Today I bring storytelling, design and technology together to build work that connects with people.</p>
                     </div>
                     <div class="right reveal reveal-delay-2">
                         <span class="label">Areas of Focus</span>
@@ -666,16 +633,7 @@
                             <li><i class="fas fa-check"></i> Websites & digital experiences</li>
                             <li><i class="fas fa-check"></i> Digital products & software</li>
                             <li><i class="fas fa-check"></i> Brand strategy & marketing</li>
-                            <li><i class="fas fa-check"></i> End-to-end creative direction</li>
                         </ul>
-                        <div class="skills">
-                            <span>Filmmaking</span>
-                            <span>Web Design</span>
-                            <span>Full-Stack Development</span>
-                            <span>Motion Graphics</span>
-                            <span>Brand Strategy</span>
-                            <span>Scriptwriting</span>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -688,17 +646,11 @@
                         <div class="video-wrapper">
                             <iframe src="https://www.youtube.com/embed/X5sFdCLMSME" allowfullscreen></iframe>
                         </div>
-                        <div class="info">
-                            <div class="tag">Film</div>
-                        </div>
                     </div>
 
                     <div class="work-card reveal reveal-delay-2">
                         <div class="video-wrapper">
                             <iframe src="https://www.youtube.com/embed/sfc75JQBNvY" allowfullscreen></iframe>
-                        </div>
-                        <div class="info">
-                            <div class="tag">Promo</div>
                         </div>
                     </div>
 
@@ -706,17 +658,11 @@
                         <div class="video-wrapper">
                             <iframe src="https://www.youtube.com/embed/uY8lcfeY81w" allowfullscreen></iframe>
                         </div>
-                        <div class="info">
-                            <div class="tag">Tech</div>
-                        </div>
                     </div>
 
                     <div class="work-card reveal reveal-delay-4">
                         <div class="video-wrapper">
                             <iframe src="https://www.youtube.com/embed/OXB1vnJ37VM" allowfullscreen></iframe>
-                        </div>
-                        <div class="info">
-                            <div class="tag">Interview</div>
                         </div>
                     </div>
 
@@ -724,17 +670,11 @@
                         <div class="video-wrapper">
                             <iframe src="https://www.youtube.com/embed/bRB2BquAFxU" allowfullscreen></iframe>
                         </div>
-                        <div class="info">
-                            <div class="tag">Film</div>
-                        </div>
                     </div>
 
                     <div class="work-card reveal reveal-delay-2">
                         <div class="video-wrapper">
                             <iframe src="https://www.youtube.com/embed/We5RMeZlKLk" allowfullscreen></iframe>
-                        </div>
-                        <div class="info">
-                            <div class="tag">Film</div>
                         </div>
                     </div>
                 </div>
@@ -786,23 +726,23 @@
                     <span class="label">Currently building</span>
                     <ul>
                         <li><i class="fas fa-bolt"></i> Growing Reial Productions into a studio where storytelling, design and technology come together.</li>
-                        <li><i class="fas fa-network-wired"></i> Building Reial Network to help filmmakers distribute their work, reach audiences and earn from their creativity.</li>
-                        <li><i class="fas fa-film"></i> Creating original films that explore meaningful stories and challenge perspectives.</li>
-                        <li><i class="fas fa-microchip"></i> Exploring AI to make creative work faster, smarter and more accessible.</li>
+                        <li><i class="fas fa-network-wired"></i> Building Reial Network to help filmmakers distribute their work and earn from their creativity.</li>
+                        <li><i class="fas fa-film"></i> Creating original films that explore meaningful stories.</li>
+                        <li><i class="fas fa-microchip"></i> Exploring AI to make creative work more accessible.</li>
                     </ul>
                     <div class="note">Curiosity keeps me building. Every project leads to the next.</div>
                 </div>
 
                 <div class="belief reveal reveal-delay-2">
-                    <p>"The best work isn't defined by the medium—it's defined by the impact it leaves behind. That's why I move between film, design and technology. Different tools, same goal: creating work that informs, inspires and lasts."</p>
+                    <p>"The best work isn't defined by the medium—it's defined by the impact it leaves behind. Different tools, same goal: creating work that informs, inspires and lasts."</p>
                 </div>
             </section>
 
             <section class="section" id="contact">
                 <div class="contact-block">
                     <div class="left reveal reveal-delay-1">
-                        <h3>Let's build something meaningful.</h3>
-                        <p>Whether you're building a brand, telling a story or creating something entirely new, I'd love to hear what you're working on.</p>
+                        <h3>Let's build something.</h3>
+                        <p>If you have an idea that needs making real, I'm listening.</p>
                     </div>
                     <div class="right reveal reveal-delay-2">
                         <a href="https://wa.me/254704908255" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
