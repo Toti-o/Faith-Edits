@@ -269,43 +269,6 @@
       color: #94A3B8;
     }
 
-    .rates-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .rate-card {
-      background: rgba(18, 22, 35, 0.8);
-      backdrop-filter: blur(8px);
-      border-radius: 24px;
-      padding: 1.5rem;
-      flex: 1;
-      min-width: 250px;
-      border: 1px solid rgba(255,255,255,0.05);
-      transition: all 0.2s;
-    }
-    .rate-card:active { transform: scale(0.98); }
-    .rate-card h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-    }
-    .rate-price {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: #F97316;
-      margin: 0.8rem 0 0.4rem;
-    }
-    .rate-price small {
-      font-size: 0.7rem;
-      font-weight: 400;
-      color: #94A3B8;
-    }
-    .rate-desc {
-      font-size: 0.85rem;
-      color: #CBD5E1;
-    }
-
     .whatsapp-float {
       position: fixed;
       bottom: 1.5rem;
@@ -369,7 +332,7 @@
       border-top: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* currently building mini */
+    /* currently building */
     .building-block {
       background: rgba(20, 24, 36, 0.6);
       border-radius: 24px;
@@ -397,6 +360,35 @@
       margin-right: 0.4rem;
     }
 
+    /* belief cards */
+    .belief-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .belief-card {
+      background: rgba(18, 22, 35, 0.7);
+      border-radius: 20px;
+      padding: 1.5rem;
+      flex: 1;
+      min-width: 220px;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .belief-card i {
+      font-size: 1.8rem;
+      color: #F97316;
+      margin-bottom: 0.5rem;
+    }
+    .belief-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+    .belief-card p {
+      font-size: 0.85rem;
+      color: #94A3B8;
+    }
+
     @media (min-width: 768px) {
       .container { padding: 0 2.5rem; }
       h1 { font-size: 4rem; }
@@ -421,15 +413,12 @@
       }
       .navbar { padding: 1.2rem 2rem; }
       .logo { font-size: 1.8rem; }
-      .rate-card h3 { font-size: 1.6rem; }
-      .rate-price { font-size: 2rem; }
     }
 
     @media (hover: hover) {
       .btn-primary:hover { background: #FF8C42; transform: translateY(-2px); }
       .btn-outline:hover { background: rgba(249, 115, 22, 0.1); transform: translateY(-2px); }
       .portfolio-card:hover { transform: translateY(-5px); border-color: rgba(249,115,22,0.4); }
-      .rate-card:hover { border-color: #F97316; transform: translateY(-3px); }
       .whatsapp-float:hover { transform: scale(1.08); }
       .nav-links a:hover { color: #F97316; }
     }
@@ -447,7 +436,7 @@
   <div class="logo">🎬 Faith Rotich</div>
   <div class="nav-links">
     <a href="#work">Work</a>
-    <a href="#rates">Rates</a>
+    <a href="#approach">Approach</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -455,7 +444,7 @@
 <main>
   <div class="container">
 
-    <!-- HERO with new copy -->
+    <!-- HERO -->
     <div class="hero reveal">
       <div class="hero-content">
         <span class="hero-badge"><i class="fas fa-bolt"></i> Founder • Filmmaker • Designer • Developer</span>
@@ -478,7 +467,7 @@
       </div>
     </div>
 
-    <!-- About: "I've never believed creativity should stay in one lane" -->
+    <!-- About -->
     <div class="section" id="about">
       <h2 class="reveal reveal-delay-1">I've never believed creativity should stay in one lane.</h2>
       <div class="two-col">
@@ -506,7 +495,7 @@
       </div>
     </div>
 
-    <!-- What I Build (condensed) -->
+    <!-- What I Build -->
     <div class="section" id="build">
       <h2 class="reveal">What I build</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 0.5rem;">
@@ -571,7 +560,7 @@
       </div>
     </div>
 
-    <!-- My Approach + Currently Building -->
+    <!-- Approach + Currently Building + What I Believe -->
     <div class="section" id="approach">
       <h2 class="reveal">My approach</h2>
       <p style="font-size:0.95rem; color:#CBD5E1; max-width:700px;">I don't chase trends. I chase clarity. The best creative work isn't the loudest — it's the work that makes people feel something, understand something or do something.</p>
@@ -586,26 +575,26 @@
         </ul>
         <p style="font-size:0.8rem; color:#94A3B8; margin-top:0.8rem;">This single section says more about ambition than another paragraph about skills.</p>
       </div>
-    </div>
 
-    <!-- Rates -->
-    <div class="section" id="rates">
-      <h2 class="reveal">What I charge</h2>
-      <div class="rates-grid">
-        <div class="rate-card reveal reveal-delay-1">
-          <h3><i class="fas fa-chart-line"></i> Promo / Commercial</h3>
-          <div class="rate-price">15,000 KES <small>/finished min</small></div>
-          <p class="rate-desc">Brand videos, ads, YouTube intros. 2 revisions, color grade, sound cleanup.</p>
-        </div>
-        <div class="rate-card reveal reveal-delay-2">
-          <h3><i class="fas fa-hourglass-half"></i> Long‑form edits</h3>
-          <div class="rate-price">12,000 KES <small>/10 min</small></div>
-          <p class="rate-desc">Documentaries, interviews, vlogs. Smooth narrative editing.</p>
-        </div>
-        <div class="rate-card reveal reveal-delay-3">
-          <h3><i class="fas fa-mobile-alt"></i> Short‑form (Reels / TikTok)</h3>
-          <div class="rate-price">7,000 KES <small>/up to 60s</small></div>
-          <p class="rate-desc">Fast turnaround, trending transitions, captions that hook.</p>
+      <!-- What I Believe (replaces rates) -->
+      <div style="margin-top: 2rem;">
+        <h3 style="font-size:1.2rem; margin-bottom:0.8rem; color:#F97316;"><i class="fas fa-heart"></i> What I believe</h3>
+        <div class="belief-grid">
+          <div class="belief-card reveal reveal-delay-1">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Ideas are cheap. Execution is everything.</h3>
+            <p>I'm not interested in concepts that stay in notebooks. I build things that exist in the real world.</p>
+          </div>
+          <div class="belief-card reveal reveal-delay-2">
+            <i class="fas fa-users"></i>
+            <h3>The best work solves a real problem.</h3>
+            <p>Flashy is forgettable. Useful is unforgettable. I create work that actually moves the needle.</p>
+          </div>
+          <div class="belief-card reveal reveal-delay-3">
+            <i class="fas fa-arrow-right"></i>
+            <h3>Curiosity beats talent.</h3>
+            <p>I'm constantly exploring new tools, mediums and ideas. That's what keeps my work fresh and relevant.</p>
+          </div>
         </div>
       </div>
     </div>
