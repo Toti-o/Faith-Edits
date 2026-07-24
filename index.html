@@ -1,3 +1,5 @@
+Here's the updated page with the previous copy, email displayed as text, and LinkedIn removed:
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -466,6 +468,7 @@
             display: flex;
             gap: 1.5rem;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .contact-block .right a {
@@ -487,6 +490,21 @@
         }
 
         .contact-block .right a i {
+            color: #F97316;
+        }
+
+        .contact-block .right .email-text {
+            color: #94A3B8;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-block .right .email-text i {
             color: #F97316;
         }
 
@@ -580,6 +598,14 @@
             }
             .belief p {
                 font-size: 0.9rem;
+            }
+            .contact-block .right {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .contact-block .right a,
+            .contact-block .right .email-text {
+                justify-content: center;
             }
         }
     </style>
@@ -746,8 +772,7 @@
                     </div>
                     <div class="right reveal reveal-delay-2">
                         <a href="https://wa.me/254704908255" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <a href="mailto:tcherotio@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                        <span class="email-text"><i class="fas fa-envelope"></i> tcherotio@gmail.com</span>
                     </div>
                 </div>
             </section>
@@ -827,3 +852,4 @@
 
 </body>
 </html>
+```
