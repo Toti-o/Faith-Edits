@@ -308,9 +308,6 @@
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.04);
             transition: 0.3s;
-            text-decoration: none;
-            color: inherit;
-            display: block;
         }
 
         .work-card:hover {
@@ -355,7 +352,7 @@
 
         .platform-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
@@ -363,13 +360,12 @@
         .platform-card {
             background: rgba(20, 24, 36, 0.5);
             border-radius: 16px;
-            padding: 2rem;
+            overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.04);
             transition: 0.3s;
             text-decoration: none;
             color: inherit;
             display: block;
-            text-align: center;
         }
 
         .platform-card:hover {
@@ -377,42 +373,45 @@
             transform: translateY(-5px);
         }
 
-        .platform-card .icon-wrap {
-            width: 64px;
-            height: 64px;
-            background: rgba(249, 115, 22, 0.1);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
+        .platform-card .preview-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #11141f;
         }
 
-        .platform-card .icon-wrap i {
-            font-size: 2rem;
+        .platform-card .preview-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .platform-card .info {
+            padding: 1rem 1.5rem;
+        }
+
+        .platform-card .info .tag {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             color: #F97316;
-        }
-
-        .platform-card h4 {
-            font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 0.3rem;
         }
 
-        .platform-card p {
-            font-size: 0.85rem;
+        .platform-card .info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0.2rem 0 0.1rem;
+        }
+
+        .platform-card .info p {
+            font-size: 0.8rem;
             color: #94A3B8;
             font-weight: 300;
-        }
-
-        .platform-card .badge {
-            display: inline-block;
-            margin-top: 0.8rem;
-            font-size: 0.7rem;
-            color: #F97316;
-            background: rgba(249, 115, 22, 0.1);
-            padding: 0.3rem 1.2rem;
-            border-radius: 20px;
         }
 
         .currently {
@@ -665,7 +664,6 @@
 
             <section class="section" id="work">
                 <h2 class="reveal">Work</h2>
-                <p style="color:#94A3B8; font-weight:300; margin-bottom:1.5rem;">A few things I've made.</p>
                 <div class="work-grid">
 
                     <div class="work-card reveal reveal-delay-1">
@@ -731,22 +729,40 @@
             </section>
 
             <section class="section" id="platforms">
-                <h2 class="reveal">Platforms I've built</h2>
-                <p style="color:#94A3B8; font-weight:300; margin-bottom:1.5rem;">Live projects you can explore.</p>
+                <h2 class="reveal">Platforms</h2>
                 <div class="platform-grid">
 
                     <a href="https://reial-network.vercel.app/" target="_blank" class="platform-card reveal reveal-delay-1">
-                        <div class="icon-wrap"><i class="fas fa-network-wired"></i></div>
-                        <h4>Reial Network</h4>
-                        <p>A platform for creators and filmmakers to distribute and monetize their work.</p>
-                        <span class="badge">Visit platform →</span>
+                        <div class="preview-wrapper">
+                            <iframe src="https://reial-network.vercel.app/" scrolling="no"></iframe>
+                        </div>
+                        <div class="info">
+                            <div class="tag">Live</div>
+                            <h4>Reial Network</h4>
+                            <p>Creator platform for filmmakers</p>
+                        </div>
                     </a>
 
                     <a href="https://midlands-sweeps.vercel.app/" target="_blank" class="platform-card reveal reveal-delay-2">
-                        <div class="icon-wrap"><i class="fas fa-home"></i></div>
-                        <h4>Midlands Sweeps</h4>
-                        <p>Professional chimney and stove services website built for a veteran-owned business.</p>
-                        <span class="badge">Visit site →</span>
+                        <div class="preview-wrapper">
+                            <iframe src="https://midlands-sweeps.vercel.app/" scrolling="no"></iframe>
+                        </div>
+                        <div class="info">
+                            <div class="tag">Live</div>
+                            <h4>Midlands Sweeps</h4>
+                            <p>Chimney & stove services</p>
+                        </div>
+                    </a>
+
+                    <a href="https://vercel.com/faiths-projects-0defffc9/shoreline" target="_blank" class="platform-card reveal reveal-delay-3">
+                        <div class="preview-wrapper">
+                            <iframe src="https://vercel.com/faiths-projects-0defffc9/shoreline" scrolling="no"></iframe>
+                        </div>
+                        <div class="info">
+                            <div class="tag">Live</div>
+                            <h4>Shoreline</h4>
+                            <p>Project on Vercel</p>
+                        </div>
                     </a>
 
                 </div>
