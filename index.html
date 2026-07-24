@@ -1,5 +1,3 @@
-Here's the updated page with revised copy and the new platform link:
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -335,7 +333,7 @@ Here's the updated page with revised copy and the new platform link:
         }
 
         .work-card .info {
-            padding: 1rem 1.5rem;
+            padding: 0.8rem 1.5rem 1rem;
         }
 
         .work-card .info .tag {
@@ -344,12 +342,6 @@ Here's the updated page with revised copy and the new platform link:
             letter-spacing: 1px;
             color: #F97316;
             font-weight: 600;
-        }
-
-        .work-card .info h4 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin: 0.2rem 0 0.1rem;
         }
 
         .platform-grid {
@@ -393,7 +385,7 @@ Here's the updated page with revised copy and the new platform link:
         }
 
         .platform-card .info {
-            padding: 1rem 1.5rem;
+            padding: 0.8rem 1.5rem 1rem;
         }
 
         .platform-card .info .tag {
@@ -407,7 +399,7 @@ Here's the updated page with revised copy and the new platform link:
         .platform-card .info h4 {
             font-size: 1rem;
             font-weight: 600;
-            margin: 0.2rem 0 0.1rem;
+            margin: 0.1rem 0;
         }
 
         .platform-card .info p {
@@ -462,6 +454,22 @@ Here's the updated page with revised copy and the new platform link:
             padding-top: 1.2rem;
         }
 
+        .belief {
+            margin-top: 2.5rem;
+            padding: 2rem;
+            border-left: 3px solid #F97316;
+            background: rgba(20, 24, 36, 0.3);
+            border-radius: 12px;
+        }
+
+        .belief p {
+            font-size: 1rem;
+            color: #CBD5E1;
+            font-weight: 300;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
         .contact-block {
             display: flex;
             flex-wrap: wrap;
@@ -480,6 +488,7 @@ Here's the updated page with revised copy and the new platform link:
         .contact-block .left p {
             color: #94A3B8;
             font-weight: 300;
+            max-width: 450px;
         }
 
         .contact-block .right {
@@ -586,6 +595,10 @@ Here's the updated page with revised copy and the new platform link:
             .platform-grid {
                 grid-template-columns: 1fr;
             }
+            .currently ul {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -596,6 +609,9 @@ Here's the updated page with revised copy and the new platform link:
                 font-size: 0.95rem;
             }
             .about-grid .left p {
+                font-size: 0.9rem;
+            }
+            .belief p {
                 font-size: 0.9rem;
             }
         }
@@ -623,8 +639,8 @@ Here's the updated page with revised copy and the new platform link:
             <section class="hero reveal">
                 <div class="hero-content">
                     <div class="hero-name">Faith Rotich</div>
-                    <h1>I turn ideas into things you can see, use, and feel.</h1>
-                    <p>Films that move people. Websites that work. Products that solve problems. I build across disciplines because that's what it takes to make something real.</p>
+                    <h1>I build ideas into reality.</h1>
+                    <p>Through film, design and technology, I help businesses, creators and startups bring ambitious ideas to life—crafting stories people remember, digital experiences people enjoy, and products that make a difference.</p>
                     <div class="hero-links">
                         <a href="#work">View work →</a>
                         <a href="#contact">Get in touch →</a>
@@ -632,30 +648,30 @@ Here's the updated page with revised copy and the new platform link:
                 </div>
                 <div class="hero-image">
                     <img src="me.jpg" alt="Faith Rotich" onerror="this.src='https://placehold.co/400x400/1A1E2C/F97316?text=FR'" />
-                    <div class="caption">Nairobi · multidisciplinary</div>
+                    <div class="caption">Nairobi · Founder, Reial Productions</div>
                 </div>
             </section>
 
             <section class="section" id="about">
                 <div class="about-grid">
                     <div class="left reveal reveal-delay-1">
-                        <h2>I work across a few things.</h2>
-                        <p>Started with a camera because I wanted to tell stories. That led to editing, design, web development, and building businesses. I didn't plan it — it just made sense.</p>
-                        <p>Now I work across film, design, development, and strategy. Good ideas don't care about categories — they just need someone who can make them real.</p>
+                        <h2>Curiosity built my career.</h2>
+                        <p>I've always been curious about how ideas become reality. That curiosity has taken me from filmmaking into design, software development, digital strategy and entrepreneurship. Every discipline has given me another way to solve problems and create work with purpose.</p>
+                        <p>Today I bring storytelling, design and technology together to help businesses, creators and startups build work that connects with people and stands the test of time.</p>
                     </div>
                     <div class="right reveal reveal-delay-2">
-                        <span class="label">What that looks like</span>
+                        <span class="label">Areas of Focus</span>
                         <ul>
-                            <li><i class="fas fa-check"></i> Shoot and edit documentary films</li>
-                            <li><i class="fas fa-check"></i> Design and build websites</li>
-                            <li><i class="fas fa-check"></i> Develop digital products</li>
-                            <li><i class="fas fa-check"></i> Run brand and marketing campaigns</li>
-                            <li><i class="fas fa-check"></i> Bring all of it together for one project</li>
+                            <li><i class="fas fa-check"></i> Storytelling through film</li>
+                            <li><i class="fas fa-check"></i> Websites & digital experiences</li>
+                            <li><i class="fas fa-check"></i> Digital products & software</li>
+                            <li><i class="fas fa-check"></i> Brand strategy & marketing</li>
+                            <li><i class="fas fa-check"></i> End-to-end creative direction</li>
                         </ul>
                         <div class="skills">
                             <span>Filmmaking</span>
                             <span>Web Design</span>
-                            <span>MERN Stack</span>
+                            <span>Full-Stack Development</span>
                             <span>Motion Graphics</span>
                             <span>Brand Strategy</span>
                             <span>Scriptwriting</span>
@@ -665,7 +681,7 @@ Here's the updated page with revised copy and the new platform link:
             </section>
 
             <section class="section" id="work">
-                <h2 class="reveal">Work</h2>
+                <h2 class="reveal">Selected Work</h2>
                 <div class="work-grid">
 
                     <div class="work-card reveal reveal-delay-1">
@@ -674,7 +690,6 @@ Here's the updated page with revised copy and the new platform link:
                         </div>
                         <div class="info">
                             <div class="tag">Film</div>
-                            <h4>The Glass Heart</h4>
                         </div>
                     </div>
 
@@ -684,7 +699,6 @@ Here's the updated page with revised copy and the new platform link:
                         </div>
                         <div class="info">
                             <div class="tag">Promo</div>
-                            <h4>Global Voyage Rwanda</h4>
                         </div>
                     </div>
 
@@ -694,7 +708,6 @@ Here's the updated page with revised copy and the new platform link:
                         </div>
                         <div class="info">
                             <div class="tag">Tech</div>
-                            <h4>Jobzy — Talent Verification</h4>
                         </div>
                     </div>
 
@@ -704,7 +717,6 @@ Here's the updated page with revised copy and the new platform link:
                         </div>
                         <div class="info">
                             <div class="tag">Interview</div>
-                            <h4>Jason Garner — Corporate Tech</h4>
                         </div>
                     </div>
 
@@ -714,7 +726,6 @@ Here's the updated page with revised copy and the new platform link:
                         </div>
                         <div class="info">
                             <div class="tag">Film</div>
-                            <h4>Mpost Video</h4>
                         </div>
                     </div>
 
@@ -724,14 +735,13 @@ Here's the updated page with revised copy and the new platform link:
                         </div>
                         <div class="info">
                             <div class="tag">Film</div>
-                            <h4>Cup of Uji</h4>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="section" id="platforms">
-                <h2 class="reveal">Platforms</h2>
+                <h2 class="reveal">Digital Products</h2>
                 <div class="platform-grid">
 
                     <a href="https://reial-network.vercel.app/" target="_blank" class="platform-card reveal reveal-delay-1">
@@ -775,20 +785,24 @@ Here's the updated page with revised copy and the new platform link:
                 <div class="currently reveal reveal-delay-1">
                     <span class="label">Currently building</span>
                     <ul>
-                        <li><i class="fas fa-bolt"></i> Reial Productions — creative studio</li>
-                        <li><i class="fas fa-network-wired"></i> Reial Network — creator platform</li>
-                        <li><i class="fas fa-film"></i> Independent film projects</li>
-                        <li><i class="fas fa-microchip"></i> Creative tools with AI</li>
+                        <li><i class="fas fa-bolt"></i> Growing Reial Productions into a studio where storytelling, design and technology come together.</li>
+                        <li><i class="fas fa-network-wired"></i> Building Reial Network to help filmmakers distribute their work, reach audiences and earn from their creativity.</li>
+                        <li><i class="fas fa-film"></i> Creating original films that explore meaningful stories and challenge perspectives.</li>
+                        <li><i class="fas fa-microchip"></i> Exploring AI to make creative work faster, smarter and more accessible.</li>
                     </ul>
-                    <div class="note">Always something in the works.</div>
+                    <div class="note">Curiosity keeps me building. Every project leads to the next.</div>
+                </div>
+
+                <div class="belief reveal reveal-delay-2">
+                    <p>"The best work isn't defined by the medium—it's defined by the impact it leaves behind. That's why I move between film, design and technology. Different tools, same goal: creating work that informs, inspires and lasts."</p>
                 </div>
             </section>
 
             <section class="section" id="contact">
                 <div class="contact-block">
                     <div class="left reveal reveal-delay-1">
-                        <h3>Let's make something.</h3>
-                        <p>If you have an idea that needs building, I'm listening.</p>
+                        <h3>Let's build something meaningful.</h3>
+                        <p>Whether you're building a brand, telling a story or creating something entirely new, I'd love to hear what you're working on.</p>
                     </div>
                     <div class="right reveal reveal-delay-2">
                         <a href="https://wa.me/254704908255" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -803,7 +817,7 @@ Here's the updated page with revised copy and the new platform link:
 
     <footer>
         <p>Faith Rotich · Nairobi</p>
-        <p style="margin-top:0.2rem; font-weight:300; color:#5b6e8c;">Filmmaker · Designer · Developer</p>
+        <p style="margin-top:0.2rem; font-weight:300; color:#5b6e8c;">Storytelling · Design · Technology</p>
     </footer>
 
     <script>
@@ -836,17 +850,22 @@ Here's the updated page with revised copy and the new platform link:
 
         // Pause other videos when one starts playing
         let players = {};
+        let playerReady = {};
 
         function onYouTubeIframeAPIReady() {
-            document.querySelectorAll('.work-card .video-wrapper iframe').forEach((iframe, index) => {
+            const iframes = document.querySelectorAll('.work-card .video-wrapper iframe');
+            iframes.forEach((iframe, index) => {
                 const id = 'player-' + index;
                 iframe.id = id;
                 players[id] = new YT.Player(id, {
                     events: {
+                        'onReady': function() {
+                            playerReady[id] = true;
+                        },
                         'onStateChange': function(event) {
                             if (event.data === YT.PlayerState.PLAYING) {
                                 for (let key in players) {
-                                    if (key !== id && players[key] && players[key].pauseVideo) {
+                                    if (key !== id && players[key] && playerReady[key]) {
                                         players[key].pauseVideo();
                                     }
                                 }
@@ -868,4 +887,3 @@ Here's the updated page with revised copy and the new platform link:
 
 </body>
 </html>
-```
